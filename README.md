@@ -16,7 +16,7 @@ Unity E-Book电子书翻译计划，希望可以让更多人学习 Unity 官方�
 - 对于 Unity 中的专有名词（如：Inspector window），我尽量保留了其英文原文（如：Inspector window 翻译为 Inspector 窗口），后序会提交翻译术语表，方便大家对照
 
 ## 翻译计划
-- 《[Create a C# style guide: Write cleaner code that scales](https://unity.com/resources/create-code-c-sharp-style-guide-e-book)》 [翻译完成](Create-a-C%23-style-guide-Write-cleaner-code-that-scales/Translated)
+- 《[Create a C# style guide: Write cleaner code that scales](https://unity.com/resources/create-code-c-sharp-style-guide-e-book)》 [翻译完成](Create-a-C%23-style-guide-Write-cleaner-code-that-scales/Translated/Create-a-C%23-style-guide-Write-cleaner-code-that-scales.md)
 - 《[Create modular game architecture in Unity with ScriptableObjects](https://unity.com/resources/create-modular-game-architecture-with-scriptable-objects-ebook)》 正在翻译中
 - 《[User interface design and implementation in Unity](https://unity.com/resources/user-interface-design-and-implementation-in-unity)》 正在翻译中
 - 《[Level up your code with design patterns and SOLID](https://unity.com/resources/design-patterns-solid-ebook)》 正在翻译中

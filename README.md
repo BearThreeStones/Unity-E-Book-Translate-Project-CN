@@ -16,7 +16,7 @@ Unity E-Book电子书翻译计划，希望可以让更多人学习 Unity 官方�
 - 《[User interface design and implementation in Unity](https://unity.com/resources/user-interface-design-and-implementation-in-unity)》 正在翻译中
 - 《[Level up your code with design patterns and SOLID](https://unity.com/resources/design-patterns-solid-ebook)》 正在翻译中
 - 《[12 Recipes for popular visual effects using the Universal Render Pipeline](https://unity.com/blog/engine-platform/12-recipes-for-popular-visual-effects-using-universal-render-pipeline)》 正在翻译中
-- 《(80 tips to increase your productivity in Unity)[https://unity.com/blog/engine-platform/tips-to-speed-up-in-unity-productivity-ebook]》正在翻译中
+- 《([80 tips to increase your productivity in Unity](https://unity.com/blog/engine-platform/tips-to-speed-up-in-unity-productivity-ebook)》正在翻译中
 ...
 
 ## 小贴士
@@ -35,3 +35,10 @@ Unity E-Book电子书翻译计划，希望可以让更多人学习 Unity 官方�
   - XXX.pdf 未翻译的官方 pdf 文件
 
 ## 勘误
+直接在 markdown 文件中修改。 然后单击右上角**Edit this file**按钮，在markdown文件中进行更改
+
+![how to edit file](edit-file.png)
+
+*在Github上编辑文件*
+
+完成后，在页面底部的**Propose file change**（**提交文件修改**） 面板中填写更改说明，然后单击**Propose file change**按钮。 它会重定向到新页面以查看你的更改。 如果一切正常，你可以通过点击**Create pull request**按钮提交pull请求

@@ -1,7 +1,9 @@
 # Unity-E-Book-Translate-Project-CN
 Unity E-Book电子书翻译计划，希望可以让更多人学习 Unity 官方知识
 
-[Unity 中国官方](https://learn.u3d.cn/u/unityguan-fang-1)也翻译了一些 E-Book ，以下是我正在学习和翻译的书籍，全部翻译完会需要一些时间，还请大家耐心等待
+[Unity 中国官方](https://learn.u3d.cn/u/unityguan-fang-1)也翻译了一些 E-Book 
+
+以下是我正在学习和翻译的书籍，全部翻译完会需要一些时间，还请大家耐心等待
 
 标题的链接指向 Unity 官方的发布页。中文的链接指向我翻译后的文档。
 

@@ -17,7 +17,7 @@ Unity E-Book电子书翻译计划，希望可以让更多人学习 Unity 官方�
 - 《[Level up your code with design patterns and SOLID](https://unity.com/resources/design-patterns-solid-ebook)》 正在翻译中
 - 《[12 Recipes for popular visual effects using the Universal Render Pipeline](https://unity.com/blog/engine-platform/12-recipes-for-popular-visual-effects-using-universal-render-pipeline)》 正在翻译中
 - 《([80 tips to increase your productivity in Unity](https://unity.com/blog/engine-platform/tips-to-speed-up-in-unity-productivity-ebook)》正在翻译中
-...
+- ...
 
 ## 小贴士
 ![how to open the content](content.png)

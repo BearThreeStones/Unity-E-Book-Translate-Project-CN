@@ -3,20 +3,7 @@ Unity E-Book电子书翻译计划，希望可以让更多人学习 Unity 官方�
 
 [Unity 中国官方](https://learn.u3d.cn/u/unityguan-fang-1)也翻译了一些 E-Book ，以下是我正在学习和翻译的书籍，全部翻译完会需要一些时间，还请大家耐心等待
 
-标题的链接指向 Unity 的发布页。中文的链接指向我翻译后的文档。
-
-![how to open the content](![](content.png))
-*在阅读文章时可以点击 outline 查看目录*
-
-## 格式
-对于图片的注释我使用斜体字体，就像上面的查看目录
-
-## 文件组成
-- Translated
-  - XXX.md 翻译后的 md 文件
-  - media 文件中的图片 
-- Originial
-  - XXX.pdf 未翻译的官方 pdf 文件
+标题的链接指向 Unity 官方的发布页。中文的链接指向我翻译后的文档。
 
 ## 翻译准则
 - 对于 Unity 中的专有名词（如：Inspector window），我尽量保留了其英文原文（如：Inspector window 翻译为 Inspector 窗口），后序会提交翻译术语表，方便大家对照
@@ -29,5 +16,20 @@ Unity E-Book电子书翻译计划，希望可以让更多人学习 Unity 官方�
 - 《[12 Recipes for popular visual effects using the Universal Render Pipeline](https://unity.com/blog/engine-platform/12-recipes-for-popular-visual-effects-using-universal-render-pipeline)》 正在翻译中
 - 《(80 tips to increase your productivity in Unity)[https://unity.com/blog/engine-platform/tips-to-speed-up-in-unity-productivity-ebook]》正在翻译中
 ...
+
+## 小贴士
+![how to open the content](content.png)
+
+*在阅读文章时可以点击 outline 查看目录*
+
+## 格式
+对于图片的注释我使用斜体字体，就像上面的查看目录
+
+## 文件组成
+- Translated
+  - XXX.md 翻译后的 md 文件
+  - media 文件中的图片 
+- Originial
+  - XXX.pdf 未翻译的官方 pdf 文件
 
 ## 勘误

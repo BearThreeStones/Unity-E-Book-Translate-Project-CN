@@ -5,6 +5,12 @@ Unity E-Book电子书翻译计划，希望可以让更多人学习 Unity 官方�
 
 标题的链接指向 Unity 的发布页。中文的链接指向我翻译后的文档。
 
+![how to open the content](![](content.png))
+*在阅读文章时可以点击 outline 查看目录*
+
+## 格式
+对于图片的注释我使用斜体字体，就像上面的查看目录
+
 ## 文件组成
 - Translated
   - XXX.md 翻译后的 md 文件

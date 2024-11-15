@@ -37,7 +37,7 @@ Unity E-Book电子书翻译计划，希望可以让更多人学习 Unity 官方�
 ## 勘误
 直接在 markdown 文件中修改。 然后单击右上角**Edit this file**按钮，在markdown文件中进行更改
 
-![how to edit file](edit-file.png)
+![how to edit file](edit.png)
 
 *在Github上编辑文件*
 

@@ -1245,8 +1245,7 @@ Unity 最资深的软件开发人员组成。加速解决方案团队专注于�
 
 本指南是计算机领域使用的最佳实践的简短列表。有关更多信息，请参阅
 
-[Microsoft 框架设计指南(Microsoft Framework Design
-Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/))，作为本文档的总体样式指南。
+[Microsoft 框架设计指南(Microsoft Framework Design Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/))，作为本文档的总体样式指南。
 
 你还可以从已经写好的关于整洁代码的综合卷中了解更多信息。以下是我们最喜欢的几本书，你可以考虑进一步学习：
 
@@ -1336,6 +1335,7 @@ CustomScript &gt; Misc 菜单下创建菜单项 ScriptableObject。
 如果你想将脚本模板应用于特定的 Unity 项目，请将整个 ScriptTemplates文件夹复制并粘贴到项目的 Assets文件夹下。
 
 ![](media/image74.png)
+
 *复制到Unity项目的ScriptTemplates*
 
 接下来，创建新的脚本模板或修改原始文件以符合您的偏好。如果你不打算更改任何脚本模板，请从项目中删除它们。

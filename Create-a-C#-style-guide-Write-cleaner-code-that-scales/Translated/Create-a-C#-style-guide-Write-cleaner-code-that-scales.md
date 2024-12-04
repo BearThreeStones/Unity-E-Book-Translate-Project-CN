@@ -594,15 +594,15 @@ public class PlayerHealth
 
 脚本序列化是将数据结构或对象状态转换为Unity可以存储和稍后重建的格式的自动过程。出于性能原因，Unity处理序列化的方式与其他编程环境不同。
 
-序列化字段出现在 Inspector 中，但你不能序列化静态字段，常量或只读字段。它们必须是公共的或带有[SerializeField]属性的标记。Unity只序列化某些字段类型，所以请参考[文档页面](https://docs.unity3d.com/Manual/script-Serialization.html?utm_source=demand-gen&utm_medium=pdf&utm_campaign=clean-code&utm_content=clean-code-that-scales-ebook)了解完整的序列化规则集合。
+序列化字段出现在检视面板中，但你不能序列化静态字段，常量或只读字段。它们必须是公共的或带有[SerializeField]属性的标记。Unity只序列化某些字段类型，所以请参考[文档页面](https://docs.unity3d.com/Manual/script-Serialization.html?utm_source=demand-gen&utm_medium=pdf&utm_campaign=clean-code&utm_content=clean-code-that-scales-ebook)了解完整的序列化规则集合。
 
 在处理序列化字段时，请遵守一些基本准则：
 
-- **使用SerializeField属性：** SerializeField属性可以与私有或受保护的变量一起使用，使它们出现在Inspector中。这比将变量声明为公有成员更能封装数据，防止外部对象覆盖其值。
+- **使用SerializeField属性：** SerializeField属性可以与私有或受保护的变量一起使用，使它们出现在检视面板中。这比将变量声明为公有成员更能封装数据，防止外部对象覆盖其值。
 
-- **使用Range属性来设置最小值和最大值：**[Range(min, max)]属性很方便，如果你想限制用户可以分配给数值字段的内容。它还可以方便地在Inspector 中将字段表示为一个滑块。
+- **使用Range属性来设置最小值和最大值：**[Range(min, max)]属性很方便，如果你想限制用户可以分配给数值字段的内容。它还可以方便地在检视面板中将字段表示为一个滑块。
 
-- **将数据分组到可序列化的类或结构中，以清理Inspector：** 定义一个公共类或结构体，并用[Serializable]标记它属性。为你想在Inspector 中暴露的每种类型定义公共变量。
+- **将数据分组到可序列化的类或结构中，以清理检视面板：** 定义一个公共类或结构体，并用[Serializable]标记它属性。为你想在检视面板中暴露的每种类型定义公共变量。
 
 ```cs
 // 示例：用于 PlayerStats 的可序列化类
@@ -619,16 +619,16 @@ public class Player : MonoBehaviour
         public bool HasHealthPotion;
     }
 
-// 示例：私有字段在 Inspector 中可见
+// 示例：私有字段在检视面板中可见
 [SerializeField]
     private PlayerStats _stats;
 }
 
 ```
-引用这个可序列化类到另一个类中，结果变量会在 Inspector 中以可折叠单元的形式出现。
+引用这个可序列化类到另一个类中，结果变量会在检视面板中以可折叠单元的形式出现。
 
 ![](media/image29.png)
-*一个可序列化的类或结构体可以帮助组织Inspector*
+*一个可序列化的类或结构体可以帮助组织检视面板*
 
 ## 大括号或缩进样式
 
@@ -951,9 +951,9 @@ Robert C.Martin的《*整洁代码之道*》中，类的第一条规则是它们
 
 回想一下Unity中推荐的类命名规则：源文件名必须与文件中的Monobehaviour的名称匹配。您可以在文件中有其他内部类， 但每个文件只能存在一个Monobehaviour。
 
-## 单一职责原则
+## 单一功能原则
 
-记住，我们的目标是保持个类的简短。在软件设计中，[单一职责原则](https://en.wikipedia.org/wiki/Single-responsibility_principle)引导你走向简洁。
+记住，我们的目标是保持个类的简短。在软件设计中，[单一功能原则](https://en.wikipedia.org/wiki/Single-responsibility_principle)引导你走向简洁。
 
 其思想是每个模块、类或函数负责一件事。假设您想要构建一款*乒乓*游戏。你可以从球拍、球和墙的类开始。
 
@@ -977,15 +977,15 @@ Robert C.Martin的《*整洁代码之道*》中，类的第一条规则是它们
 
 *一个 Monobehaviour 做所有事*
 
-然而，将所有事情都作为一个类的一部分，即使是一个小类，也会因为混合了职责而使设计变得复杂。数据与输入交织在一起，而类需要对两者应用逻辑。与KISS原则相反，你把一些简单的东西纠缠在一起了。
+然而，将所有事情都作为一个类的一部分，即使是一个小类，也会因为混合了功能而使设计变得复杂。数据与输入交织在一起，而类需要对两者应用逻辑。与KISS原则相反，你把一些简单的东西纠缠在一起了。
 
-相反，将你的 Paddle类分成更小的类，每个类有一个单一的职责。将数据分离到自己的 PaddleData类中，或者使用[ScriptableObject](https://docs.unity3d.com/Manual/class-ScriptableObject.html?utm_source=demand-gen&utm_medium=pdf&utm_campaign=clean-code&utm_content=clean-code-that-scales-ebook)。然后将其他所有内容重构为PaddleInput 类、PaddleMovement 类和PaddleAudio 类。
+相反，将你的 Paddle类分成更小的类，每个类有一个单一的功能。将数据分离到自己的 PaddleData类中，或者使用[ScriptableObject](https://docs.unity3d.com/Manual/class-ScriptableObject.html?utm_source=demand-gen&utm_medium=pdf&utm_campaign=clean-code&utm_content=clean-code-that-scales-ebook)。然后将其他所有内容重构为PaddleInput 类、PaddleMovement 类和PaddleAudio 类。
 
 PaddleLogic 类可以处理来自 PaddleInput 的输入。应用 PaddleData中的速度信息，它可以使用划桨运动。最后，PaddleLogic 可以通知 PaddleAudio 在球与球拍碰撞时播放声音。
 
 ![](media/image56.jpeg)
 
-将一个Paddle类重构为单一职责
+将一个Paddle类重构为单一功能
 
 在这次重新设计中，每个类只做一件事，并适合于小的、易于理解的部分。你不需要滚动浏览几个屏幕来理解代码。
 
@@ -1002,7 +1002,7 @@ PaddleLogic 类可以处理来自 PaddleInput 的输入。应用 PaddleData中�
 > “当你读到的每个程序都和你预期的差不多时，你就知道你正在编写整洁的代码。”
 > — Ward Cunningham，Wiki的发明者，也是极限编程(eXtreme Programming)的联合创始人
 
-与类一样，方法也应该小而精，并且只有一个职责。每个方法应该描述一个动作或回答一个问题。它不应该两者兼顾。
+与类一样，方法也应该小而精，并且只有一个功能。每个方法应该描述一个动作或回答一个问题。它不应该两者兼顾。
 
 一个好的方法名字反映了它的作用。例如,GetDistanceToTarget这个名称就阐明了它的预期目的。
 
@@ -1031,7 +1031,7 @@ UnityEngine API 的一种简洁方法。
 
 要创建扩展方法，请创建一个静态方法，并在第一个参数之前使用this关键字，这将是你想要扩展的类型。
 
-例如，假设你想创建一个名为ResetTransformation的方法来移除GameObject的缩放、旋转或平移。
+例如，假设你想创建一个名为ResetTransformation的方法来移除游戏对象的缩放、旋转或平移。
 
 你可以创建一个静态方法，使用this关键字为第一个参数传递转换：
 
@@ -1071,7 +1071,7 @@ public class ResetOnStart : MonoBehaviour
 
 在《*程序员修炼之道*》一书中，Andy Hunt和Dave Thomas提出了 DRY原则，即“不要重复自己”。这个在软件工程中常被提起的箴言建议程序员避免重复或冗余的逻辑。
 
-这样做，你可以减少bug修复和维护成本。如果你遵循单一职责原则，当你修改一个类或方法时，你不应该需要更改一段不相关的代码。在DRY 程序中消除一个逻辑错误就可以在所有地方消除它。
+这样做，你可以减少bug修复和维护成本。如果你遵循单一功能原则，当你修改一个类或方法时，你不应该需要更改一段不相关的代码。在DRY 程序中消除一个逻辑错误就可以在所有地方消除它。
 
 DRY 的反义词是WET（“我们喜欢打字”或“所有东西都写两次”）。当代码中存在不必要的重复时，编程就是WET。
 
@@ -1139,7 +1139,7 @@ private void PlayFXWithSound(ParticleSystem particle, AudioClip clip, Vector3 hi
 
 - **大多数情况下使用双斜杠(//)注释标签：** 将注释放在它解释的代码附近，而不是在开头使用大型多行注释。保持注释靠近代码有助于读者将解释与逻辑联系起来。
 
-- **对序列化字段使用工具提示代替注释：** 如果你的字段在 Inspector 中需要解释，添加 Tooltip 属性并跳过单独的注释。工具提示将完成双重任务。
+- **对序列化字段使用工具提示代替注释：** 如果你的字段在检视面板中需要解释，添加 Tooltip 属性并跳过单独的注释。工具提示将完成双重任务。
 
 ```cs
 // EXAMPLE: Tooltip replaces comment
@@ -1202,11 +1202,11 @@ public void Fire()
 
 - **谜一般的命名：** 每个人都喜欢好谜题，但在编码标准中除外。类、方法和变量需要直截了当、没有废话的名称。
 
-- **不必要的复杂性：** 当你试图预测一个类的所有可能需求时，就会发生过度工程化。这可以表现为带有长方法或试图做太多事情的大型的上帝对象。将大型类分解成更小的专用部分，每个部分都有自己的职责。
+- **不必要的复杂性：** 当你试图预测一个类的所有可能需求时，就会发生过度工程化。这可以表现为带有长方法或试图做太多事情的大型的上帝对象。将大型类分解成更小的专用部分，每个部分都有自己的功能。
 
-- **不灵活：** 一个小小的改动不应该要求你在其他地方进行多处改动。如果是这种情况，请仔细检查你是否违反了单一职责原则当你让一件事承担不止一项责任时，它就会承担更多责任。
+- **不灵活：** 一个小小的改动不应该要求你在其他地方进行多处改动。如果是这种情况，请仔细检查你是否违反了单一功能原则当你让一件事承担不止一项责任时，它就会承担更多责任。
 
-当你赋予某个事物多个职责时，它更容易出错，因为更难预测所有事情。如果你更新了一个只做一件事的方法，并且更新后的逻辑仍然有效，你期望你的其余代码之后继续有效。
+当你赋予某个事物多个功能时，它更容易出错，因为更难预测所有事情。如果你更新了一个只做一件事的方法，并且更新后的逻辑仍然有效，你期望你的其余代码之后继续有效。
 
 - **脆弱性：** 如果你做了一个微小的更改，所有东西都停止工作，这通常表明有问题。
 
@@ -1244,7 +1244,8 @@ Unity 最资深的软件开发人员组成。加速解决方案团队专注于�
 
 本指南是计算机领域使用的最佳实践的简短列表。有关更多信息，请参阅
 
-[Microsoft 框架设计指南(Microsoft Framework Design Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/))，作为本文档的总体样式指南。
+[Microsoft 框架设计指南(Microsoft Framework Design
+Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/))，作为本文档的总体样式指南。
 
 你还可以从已经写好的关于整洁代码的综合卷中了解更多信息。以下是我们最喜欢的几本书，你可以考虑进一步学习：
 
@@ -1334,7 +1335,6 @@ CustomScript &gt; Misc 菜单下创建菜单项 ScriptableObject。
 如果你想将脚本模板应用于特定的 Unity 项目，请将整个 ScriptTemplates文件夹复制并粘贴到项目的 Assets文件夹下。
 
 ![](media/image74.png)
-
 *复制到Unity项目的ScriptTemplates*
 
 接下来，创建新的脚本模板或修改原始文件以符合您的偏好。如果你不打算更改任何脚本模板，请从项目中删除它们。

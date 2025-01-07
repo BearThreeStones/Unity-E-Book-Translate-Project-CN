@@ -8,7 +8,7 @@ Unity E-Book电子书翻译计划，希望可以让更多人学习 Unity 官方�
 标题的链接指向 Unity 官方的发布页。中文的链接指向我翻译后的文档。
 
 ## 翻译准则
-- 对于 Unity 中的专有名词（如：Inspector window），我尽量保留了其英文原文（如：Inspector window 翻译为 Inspector 窗口），后续会更新翻译术语表，方便大家对照
+- 对于 Unity 中的专有名词（如：Inspector window），参照官方术语表翻译（翻译为：检视面板），后续会更新翻译术语表，方便大家对照
 
 ## 翻译计划
 - 《[Create a C# style guide: Write cleaner code that scales](https://unity.com/resources/create-code-c-sharp-style-guide-e-book)》 [翻译完成](Create-a-C%23-style-guide-Write-cleaner-code-that-scales/Translated/Create-a-C%23-style-guide-Write-cleaner-code-that-scales.md)

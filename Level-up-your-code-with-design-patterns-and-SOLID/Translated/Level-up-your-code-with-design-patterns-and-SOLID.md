@@ -2218,7 +2218,7 @@ MVC 背后的基本理念是将软件的逻辑部分与数据和展示部分分�
 
 ![](media/31180407afed54d0445762d6b968f050.png)
 
-_Model 、 View 与 Controller _
+_Model 、 View 与 Controller_
 
 这种关注点分离还具体定义了这三个部分如何相互作用。 Model 管理应用程序数据，而 View 将这些数据展示给用户。 Controller 处理输入，并对游戏数据做出任何决策或计算。然后，它将结果发送回 Model 。
 

@@ -20,7 +20,7 @@
 
 **贡献者**
 
-本指南由Wilmer Lin撰写，他是一名拥有超过15年影视行业经验的3D和视觉效果艺术家，现在是一名独立游戏开发者和教育家。高级技术内容营销经理Thomas Krogh-Jacobsen和高级Unity工程师Peter Andreasen和Scott Bilas也做出了重大贡献。
+本指南由 Wilmer Lin 撰写，他是一名拥有超过15年影视行业经验的3D和视觉效果艺术家，现在是一名独立游戏开发者和教育家。高级技术内容营销经理 Thomas Krogh-Jacobsen 和高级 Unity 工程师 Peter Andreasen 和 Scott Bilas 也做出了重大贡献。
 
 # 如何使用本指南
 
@@ -28,7 +28,7 @@
 
 ## 示例项目
 
-本电子书附有一个 [示例项目](https://assetstore.unity.com/packages/slug/289616) ，展示了本书中的一些代码。请从 Asset Store 下载该项目，并跟随使用相应的场景来探索这些设计模式及其基本原则。
+本电子书附有一个[示例项目](https://assetstore.unity.com/packages/slug/289616) ，展示了本书中的一些代码。请从 Asset Store 下载该项目，并跟随使用相应的场景来探索这些设计模式及其基本原则。
 
 ![](media/6e69cc48a9be68b244433c16c6301626.png)
 
@@ -2232,15 +2232,15 @@ _Model 、 View 与 Controller_
 
 然而，遵循传统的 MVC 模式将需要与 View 特定的代码来监听 Model 数据在运行时的任何变化。
 
-虽然这是一种有效的方法，但许多 Unity 开发者选择使用 MVC 的一种变体，在这种变体中， Controller 充当中介。在这里，View 不直接观察 Model。相反，它做类似以下的事情：
+虽然这是一种有效的方法，但许多 Unity 开发者选择使用 MVC 的一种变体，在这种变体中，Controller 充当中介。在这里，View 不直接观察 Model。相反，它做类似以下的事情：
 
 这种 MVC 的变体被称为 Model View Presenter 设计或者 MVP。MVP 仍然保留了三个独立应用层之间的关注点分离。然而，它稍微改变了每个部分的职责。
 
-在 MVP 中， Presenter，（MVC 中称为 Controller）充当其他层之间的中介。它从 Model 中检索数据，然后将其格式化以在 View 中显示。MVP 切换了哪个层处理输入。与 Controller 不同， View 负责处理用户输入。
+在 MVP 中，Presenter，（MVC 中称为 Controller）充当其他层之间的中介。它从 Model 中检索数据，然后将其格式化以在 View 中显示。MVP 切换了哪个层处理输入。与 Controller 不同， View 负责处理用户输入。
 
 请注意架构如何利用事件和观察者模式。虽然 View 通过按钮、切换开关和滑块等 UI 元素捕获用户输入，但它通过事件将这些输入传递给 Presenter。
 
-然后， Presenter 根据这些交互更新 Model 。一旦数据被更新，另一个事件会通知 Presenter 。然后，它使用修改后的数据刷新 UI。
+然后，Presenter 根据这些交互更新 Model。一旦数据被更新，另一个事件会通知 Presenter。然后，它使用修改后的数据刷新 UI。
 
 ![](media/a0ad1648c68b9f657522578b61c3ab92.png)
 
@@ -2372,7 +2372,7 @@ _使用 MVP 的示例生命界面_
 
 ### Unity UI 中的 MVP 
 
-在示例项目中，点击目标可以损害生命条或通过按钮重置生命。这些 UI 元素通知 `HealthPresenter`（它调用 `ApplyDamage` 或 `ResetHealth`），而不是直接更改生命。
+在示例项目中，点击目标可以减少生命或通过按钮重置生命。这些 UI 元素通知 `HealthPresenter`（它调用 `ApplyDamage` 或 `ResetHealth`），而不是直接更改生命。
 
 ## 优缺点
 
@@ -2396,11 +2396,11 @@ MVP（和MVC）对于大型应用程序表现尤为出色。如果您的游戏�
 
 # Model-View-ViewModel
 
-虽然 MVP 将关注点分离应用于我们的项目，但 Presenter 所做的许多工作仅仅是在 model 和 view 之间传递数据。这意味着大量的数据处理样板代码。
+虽然 MVP 将关注点分离应用于我们的项目，但 Presenter 所做的许多工作仅仅是在 model 和 view 之间传递数据。这实质上就是大量用于数据处理的样板代码。
 
 例如，在之前的场景，您有一个玩家统计数据，例如生命值。我们可以在 UI 中以多种方式表示这个值。例如，当生命值很低时，生命值可以显示为红色（完全生命为绿色），或者显示警告信息。
 
-在 MVP 中， Presenter 需要查询接口，然后设置一些逻辑来根据需要更新每个 UI 元素。在大多数情况下，展示层仅仅是在提供现有的数据，格式化和预处理它们以供 View 使用。自动化这一过程可以简化我们的工作流程。
+在 MVP 中，Presenter 需要查询接口，然后设置一些逻辑来根据需要更新每个 UI 元素。在大多数情况下，展示层仅仅是在提供现有的数据，格式化和预处理它们以供 View 使用。自动化这一过程可以简化我们的工作流程。
 
 ![](media/0d3c17af0301cd4beeeabdc3e6c9dcf7.jpeg)
 
@@ -2408,7 +2408,7 @@ _MVVM 模式_
 
 ## Unity 6 中的 MVVM
 
-因此，Unity 6 包含了一个运行时数据绑定系统，这将 MVP 模式升级为[Model-View-ViewModel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)（MVVM）模式。与 MVP 类似，MVVM 也包含三个主要部分：
+因此，Unity 6 包含了一个运行时数据绑定系统，这将 MVP 模式升级为 [Model-View-ViewModel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)（MVVM）模式。与 MVP 类似，MVVM 也包含三个主要部分：
 
 - **Model：**  Model 代表应用程序的数据和业务逻辑。这可以是任何对象，通常以 ScriptableObject 或 MonoBehaviour 的形式存在。
 - **View：**  View 是显示数据并与用户交互的用户界面。在 UI Toolkit 中，这通常由一个 UXML 文件和一个 USS 样式表组成。
@@ -2422,7 +2422,7 @@ _MVVM 模式_
 
 设置绑定会自动同步基础数据与相应视觉元素之间的更改。这消除了为每个 UI 更新手动编写事件处理程序的需要。
 
-Unity 6中的UI Toolkit现在支持[运行时数据绑定](https://docs.unity3d.com/6000.0/Documentation/Manual/UIE-runtime-binding.html)。此功能允许在运行时 UI 操作期间将 C# 对象的属性绑定到 UI 控件属性。只要不用于序列化数据，您也可以在编辑器 UI 中使用它。
+Unity 6 中的 UI Toolkit 现在支持[运行时数据绑定](https://docs.unity3d.com/6000.0/Documentation/Manual/UIE-runtime-binding.html)。此功能允许在运行时 UI 操作期间将 C# 对象的属性绑定到 UI 控件属性。只要不用于序列化数据，您也可以在编辑器 UI 中使用它。
 
 ## 示例：更新的样本项目
 
@@ -2432,7 +2432,7 @@ Unity 6中的UI Toolkit现在支持[运行时数据绑定](https://docs.unity3d.
 
 ![](media/7553c7d3d6fe7461c2f89e2d684fe3fa.png)
 
-`MVVM` 示例场景
+_`MVVM` 示例场景_
 
 通过调整来自 MVP 示例场景的相同生命值条示例，展示了设计模式之间的差异：
 
